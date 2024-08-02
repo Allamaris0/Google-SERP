@@ -59,13 +59,3 @@ class GoogleSearchScraper:
                             self.results[i] = {'url': href.strip(), 'title': title}
                             break
             tries += 1
-
-# Użycie klasy
-search = GoogleSearchScraper(domain='pl', language='pl-PL,pl;q=0.5')
-query = "zasiłek dla samotnej matki"
-
-search.get_multiple_result(query=query, k=5)
-
-print("URLs:", search.urls)
-print("Titles:", search.titles)
-print("Results:", search.results)
